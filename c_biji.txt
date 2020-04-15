@@ -1,0 +1,31 @@
+通过声明C函数为外部的，可以把他们集成于C++中，而且，并不需要逐个声明函数，可以一次把整个文件声明为外部的
+
+格式如下：
+#ifndef _IMOS_MW_SDK_TYPEDEF_H_
+#define _IMOS_MW_SDK_TYPEDEF_H_
+
+#ifdef  __cplusplus
+extern "C"{
+#endif
+
+typedef IMOS_MW_USER_LOGIN_ID_INFO_S USER_LOGIN_ID_INFO_S;
+typedef IMOS_MW_CAMERA_INFO_S			CAMERA_INFO_S;
+typedef IMOS_MW_EC_INFO_S				EC_INFO_S;
+typedef IMOS_MW_DEV_CHANNEL_INDEX_S		DEV_CHANNEL_INDEX_S;
+typedef IMOS_MW_VIN_CHANNEL_S			VIN_CHANNEL_S;
+typedef IMOS_MW_VIDEO_STREAM_S			VIDEO_STREAM_S;
+typedef IMOS_MW_OSD_TIME_S				OSD_TIME_S;
+typedef IMOS_MW_OSD_NAME_S				OSD_NAME_S;
+typedef IMOS_MW_VIDEO_AREA_S			VIDEO_AREA_S;
+typedef IMOS_MW_SERIAL_INFO_S			SERIAL_INFO_S;
+typedef IMOS_MW_SEMA_INPUT_INFO_S		SEMA_INPUT_INFO_S;
+typedef IMOS_MW_SEMA_OUTPUT_INFO_S		SEMA_OUTPUT_INFO_S;
+typedef IMOS_MW_PRESET_INFO_S			PRESET_INFO_S;
+typedef IMOS_MW_PTZ_CTRL_COMMAND_S		PTZ_CTRL_COMMAND_S;
+ 
+中间为声明
+#ifdef  __cplusplus
+}
+#endif /* end of __cplusplus */
+
+#endif
